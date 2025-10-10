@@ -8,17 +8,17 @@ private:
     int doors;
 
 public:
-    Car(const std::string& b, int y, int d)
-            : Vehicle(b, y), doors(d) {}
+    Car(string b, int y, int d) : Vehicle(b, y), doors(d) {}
 
-    void displayInfo() const override {
+    void displayInfo() override {
         Vehicle::displayInfo();
-        std::cout << "Doors: " << doors << std::endl;
+        cout << "Doors: " << doors << endl;
     }
 
     ~Car() override {
-        std::cout << "Car is destroyed" << std::endl;
+        cout << "Car is destroyed" << endl;
     }
 };
 
 #endif
+
