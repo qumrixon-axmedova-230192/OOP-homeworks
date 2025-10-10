@@ -1,6 +1,3 @@
-
-// Created by Qumrixon on 10/10/2025.
-
 #ifndef ELECTRICCAR_H
 #define ELECTRICCAR_H
 
@@ -11,16 +8,16 @@ private:
     int batteryRange;
 
 public:
-    ElectricCar(string b, int y, int d, int br)
+    ElectricCar(const std::string& b, int y, int d, int br)
             : Car(b, y, d), batteryRange(br) {}
 
-    void displayInfo() override {
+    void displayInfo() const override {
         Car::displayInfo();
-        cout << "Battery Range: " << batteryRange << " km" << endl;
+        std::cout << "Battery Range: " << batteryRange << " km" << std::endl;
     }
 
     ~ElectricCar() override {
-        cout << "Electric car is destroyed" << endl;
+        std::cout << "Electric car is destroyed" << std::endl;
     }
 };
 

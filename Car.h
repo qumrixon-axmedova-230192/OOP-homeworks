@@ -1,5 +1,3 @@
-
-// Created by Qumrixon on 09/10/2025.
 #ifndef CAR_H
 #define CAR_H
 
@@ -10,15 +8,16 @@ private:
     int doors;
 
 public:
-    Car(string b, int y, int d) : Vehicle(b, y), doors(d) {}
+    Car(const std::string& b, int y, int d)
+            : Vehicle(b, y), doors(d) {}
 
-    void displayInfo() override {
+    void displayInfo() const override {
         Vehicle::displayInfo();
-        cout << "Doors: " << doors << endl;
+        std::cout << "Doors: " << doors << std::endl;
     }
 
     ~Car() override {
-        cout << "Car is destroyed" << endl;
+        std::cout << "Car is destroyed" << std::endl;
     }
 };
 

@@ -1,7 +1,3 @@
-//OOP 1st homework
-// Created by Qumrixon on 09/10/2025.
-
-
 #ifndef VEHICLE_H
 #define VEHICLE_H
 
@@ -16,10 +12,13 @@ private:
     static int totalVehicles;
 
 public:
-    Vehicle(string b, int y) : brand(b), year(y) {
+    Vehicle(string b, int y) {
+        brand = b;
+        year = y;
         totalVehicles++;
     }
-    virtual void displayInfo() {
+
+    void displayInfo() {
         cout << "Brand: " << brand << endl;
         cout << "Year: " << year << endl;
     }
@@ -28,12 +27,10 @@ public:
         return totalVehicles;
     }
 
-
-    virtual ~Vehicle() {
+    ~Vehicle() {
         cout << "Vehicle is destroyed" << endl;
     }
 };
 
-int Vehicle::totalVehicles = 0;
-
 #endif
+
